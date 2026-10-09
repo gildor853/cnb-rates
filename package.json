@@ -51,13 +51,13 @@
   },
   "scripts": {
     "build": "tsup",
-    "typecheck": "tsc --noEmit",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
     "test": "vitest run",
     "test:watch": "vitest",
     "prepublishOnly": "npm run typecheck && npm test && npm run build"
   },
-  "dependencies": {},
   "devDependencies": {
+    "@types/node": "^18.19.130",
     "tsup": "^8.5.1",
     "typescript": "~5.9.3",
     "vitest": "^3.2.7"

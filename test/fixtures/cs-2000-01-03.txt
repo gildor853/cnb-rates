@@ -1,0 +1,19 @@
+03.01.2000 #1
+země|měna|množství|kód|kurz
+Austrálie|dolar|1|AUD|23,363
+Dánsko|koruna|1|DKK|4,849
+EMU|euro|1|EUR|36,100
+Japonsko|jen|100|JPY|34,950
+Kanada|dolar|1|CAD|24,622
+Maďarsko|forint|100|HUF|14,183
+MMF|ZPČ|1|XDR|49,111
+Norsko|koruna|1|NOK|4,474
+Nový Zéland|dolar|1|NZD|18,631
+Polsko|zlotý|1|PLN|8,632
+Řecko|drachma|100|GRD|10,937
+Slovensko|koruna|100|SKK|85,164
+Slovinsko|tolar|100|SIT|18,152
+Švédsko|koruna|1|SEK|4,216
+Švýcarsko|frank|1|CHF|22,458
+USA|dolar|1|USD|35,822
+Velká Británie|libra|1|GBP|57,807
