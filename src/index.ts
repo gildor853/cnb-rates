@@ -9,3 +9,16 @@ export {
   type AmountInput,
   type ConvertOptions,
 } from "./convert.js";
+export { FIRST_DATE, pragueDate, type DateInput } from "./date.js";
+export {
+  CNB_ENDPOINTS,
+  createCnbClient,
+  getRates,
+  tryGetRates,
+  type ClientOptions,
+  type CnbClient,
+  type FetchLike,
+  type FetchedRateList,
+  type RatesCache,
+  type RequestOptions,
+} from "./client.js";
