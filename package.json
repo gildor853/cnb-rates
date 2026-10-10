@@ -1,0 +1,76 @@
+{
+  "name": "cnb-rates",
+  "version": "1.0.0",
+  "description": "Zero-dependency TypeScript client for the Czech National Bank (\u010cNB) daily FX fixing: exact decimal parsing, date resolution in Europe/Prague and conversions via CZK.",
+  "author": "Gildor",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gildor853/cnb-rates.git"
+  },
+  "homepage": "https://github.com/gildor853/cnb-rates#readme",
+  "bugs": {
+    "url": "https://github.com/gildor853/cnb-rates/issues"
+  },
+  "keywords": [
+    "cnb",
+    "czech-national-bank",
+    "exchange-rates",
+    "fx",
+    "czk",
+    "kurzy",
+    "kurzovni-listek",
+    "currency"
+  ],
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md",
+    "DISCLAIMER.md",
+    "SECURITY.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "prepare": "npm run build",
+    "typecheck": "tsc --noEmit && tsc --noEmit -p tsconfig.test.json",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "smoke": "node scripts/smoke.mjs && node scripts/smoke.cjs",
+    "check:readme": "node scripts/check-readme.mjs",
+    "prepublishOnly": "npm run typecheck && npm run test:coverage && npm run build && npm run smoke && npm run check:readme && npm run check:legal",
+    "check:legal": "node scripts/check-legal.mjs"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^5.0.3",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "vitest": "^5.0.3"
+  },
+  "overrides": {
+    "esbuild": "^0.28.2"
+  }
+}
